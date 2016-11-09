@@ -2,7 +2,9 @@ $(function() {
 	menu = $('nav ul');
 
   $('#openup').on('click', function(e) {
-    e.preventDefault(); menu.slideToggle();
+    e.preventDefault(); 
+    menu.slideToggle();
+    console.log('called');
   });
   
   $(window).resize(function(){
