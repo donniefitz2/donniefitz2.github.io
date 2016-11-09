@@ -30,7 +30,7 @@ nav a {
   text-decoration: none;
 }
 nav li:hover {
-  background-color: #444;
+  background-color: #33C3F0;
 }
 nav a#openup {
   display: none;
