@@ -4,6 +4,20 @@
   border-radius: 100px;
 }
 
+/* Nav header
+-------------------------------------------------- */
+.nav-header {
+  background-color: #33C3F0;
+  color: #fff;
+}
+
+.nav-header li
+{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+}
+
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
