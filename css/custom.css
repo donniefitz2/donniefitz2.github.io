@@ -170,7 +170,7 @@ nav a#openup {
   .hero {
     padding-bottom: 12rem;
     text-align: left;
-    height: 165px;
+    height: 100px;
   }
   .phone {
     position: absolute;
@@ -195,7 +195,7 @@ nav a#openup {
 /* Bigger than 750 */
 @media (min-width: 750px) {
   .hero {
-    height: 190px;
+    height: 100px;
   }
   .hero-heading {
     font-size: 2.6rem;
@@ -228,7 +228,7 @@ nav a#openup {
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
   .section {
-    padding: 20rem 0 19rem;
+    padding: 10rem 0 19rem;
   }
   .hero {
     padding: 22rem 0;
