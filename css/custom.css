@@ -128,21 +128,22 @@ nav a#openup {
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .values {
-  background-image: url('../images/values-bg.jpg');
+  background-color: #33C3F0;
   background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
 }
 .value-multiplier {
   margin-bottom: .5rem;
-  color: #11DFC7;
+  color: #fff;
+  font-size: 4em;
 }
 .value-heading {
   margin-bottom: .3rem;
 }
 .value-description {
-  opacity: .8;
   font-weight: 300;
+  color: #f1f1f1;
 }
 
 /* Help
@@ -170,7 +171,7 @@ nav a#openup {
   .hero {
     padding-bottom: 12rem;
     text-align: left;
-    height: 100px;
+    height: 165px;
   }
   .phone {
     position: absolute;
@@ -195,7 +196,7 @@ nav a#openup {
 /* Bigger than 750 */
 @media (min-width: 750px) {
   .hero {
-    height: 100px;
+    height: 190px;
   }
   .hero-heading {
     font-size: 2.6rem;
@@ -228,7 +229,7 @@ nav a#openup {
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
   .section {
-    padding: 10rem 0 19rem;
+    padding: 20rem 0 19rem;
   }
   .hero {
     padding: 22rem 0;
