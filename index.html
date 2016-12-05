@@ -107,11 +107,11 @@
                 <div class="row">
                     <div class="six columns">
                         <label for="recipientName">Full name</label>
-                        <input class="u-full-width" name="name" type="text" placeholder="First Last" id="fullName">
+                        <input class="u-full-width" name="fullName" type="text" placeholder="First Last" id="fullName">
                     </div>
                     <div class="six columns">
                         <label for="exampleEmailInput">Your email</label>
-                        <input class="u-full-width" name="_replyto" type="email" placeholder="you@mailbox.com" id="email">
+                        <input class="u-full-width" name="_replyto" type="email" placeholder="you@mailbox.com" id="_replyto">
                     </div>
                 </div>
                 <label for="exampleMessage">Message</label>
@@ -157,7 +157,7 @@ $(function() {
       // of an input field. Validation rules are defined
       // on the right side
       fullName: "required",
-      email: {
+      _replyto: {
         required: true,
         // Specify that email should be validated
         // by the built-in "email" rule
@@ -168,7 +168,7 @@ $(function() {
     // Specify validation error messages
     messages: {
       fullName: "Please enter your full name",
-      email: "Please enter a valid email address",
+      _replyto: "Please enter a valid email address",
       message: "Please enter a message"
     },
     // Make sure the form is submitted to the destination defined
