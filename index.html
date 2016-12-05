@@ -58,7 +58,7 @@
                 <div class="one-half column">
                     <img src="images/f3-logo-website.png" style="width:100%; margin-bottom:75px;" />
                     <h5 class="hero-heading">Full service mobile app development.</h5>
-                    <a class="button button-primary" href="contact">Contact Us</a>
+                    <a class="button button-primary" href="#contact">Contact Us</a>
                 </div>
                 <div class="one-half column phones">
                     <img class="phone" src="images/iphone.png">
@@ -106,18 +106,18 @@
                 <div class="row">
                     <div class="six columns">
                         <label for="recipientName">Full name</label>
-                        <input class="u-full-width" name="name" type="text" placeholder="First Last" id="recipientName">
+                        <input class="u-full-width" name="name" type="text" placeholder="First Last" id="fullName">
                     </div>
                     <div class="six columns">
                         <label for="exampleEmailInput">Your email</label>
-                        <input class="u-full-width" name="_replyto" type="email" placeholder="you@mailbox.com" id="exampleEmailInput">
+                        <input class="u-full-width" name="_replyto" type="email" placeholder="you@mailbox.com" id="email">
                     </div>
                 </div>
                 <label for="exampleMessage">Message</label>
-                <textarea class="u-full-width" name="message" placeholder="Your message..." id="exampleMessage"></textarea>
+                <textarea class="u-full-width" name="message" placeholder="Your message..." id="message"></textarea>
                 <input type="hidden" name="_next" value="thankyou.html" />
                 <input type="hidden" name="_subject" value="[F3 Website Submission]" />
-                <input class="button-primary" type="submit" value="Send">
+                <input class="button-primary" type="submit" value="Send" id="submit-button">
             </form>
         </div>
     </div>
@@ -132,7 +132,7 @@
 
     <script>
     $(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -144,6 +144,26 @@
       }
     }
   });
+});
+
+$("#submit-button").click(function(e) {
+    e.preventDefault();
+
+    var fullName = $("#fullName");
+    var email = $("#email");
+    var message = $("#message");
+
+    if (fullName.length < 2) {
+        alert("Please enter your full name");
+    }
+
+    if (email.length < 2) {
+        alert("Please enter your email address");
+    }
+
+    if (message.length < 5) {
+        alert("Please enter a message");
+    }
 });
     </script>
 </body>
