@@ -146,6 +146,17 @@ nav a#openup {
   color: #f1f1f1;
 }
 
+
+/* Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.about {
+  background-color: #f5f5f5;
+  background-size: cover;
+  color: #000;
+  padding-bottom: 5rem;
+}
+
+
 /* Help
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .get-help {
