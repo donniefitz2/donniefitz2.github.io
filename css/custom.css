@@ -286,3 +286,7 @@ nav a#openup {
   color: #eee;
   text-decoration: none;
 }
+
+form .error {
+  color: #ff0000;
+}
