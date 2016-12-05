@@ -155,14 +155,17 @@ $("#submit-button").click(function(e) {
 
     if (fullName.length < 2) {
         alert("Please enter your full name");
+        return;
     }
 
     if (email.length < 2) {
         alert("Please enter your email address");
+        return;
     }
 
     if (message.length < 5) {
         alert("Please enter a message");
+        return;
     }
 });
     </script>
