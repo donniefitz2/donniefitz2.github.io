@@ -103,23 +103,18 @@
         <div class="container">
             <h2>Contact Us</h2>
             <p>To learn more about getting your mobile app off the ground, contact us and we'll get back to you shortly.</p>
-            <form name="contact-form" action="https://formspree.io/don@factorthreesoftware.com" method="POST">
-                <div class="row">
-                    <div class="six columns">
-                        <label for="recipientName">Full name</label>
-                        <input class="u-full-width" name="fullName" type="text" placeholder="First Last" id="fullName">
-                    </div>
-                    <div class="six columns">
-                        <label for="exampleEmailInput">Your email</label>
-                        <input class="u-full-width" name="_replyto" type="email" placeholder="you@mailbox.com" id="_replyto">
-                    </div>
+            <script type="text/javascript" src="https://odamae.io/form/js/light.js"></script>
+                <form id="odamae-contact-form" method="post" style="display: none">
+                    <div class="odamae-row">
+		            <input type="text" class="odamae-input" name="name" id="name" value="" placeholder="Name" />
+		            <input type="text" class="odamae-input" name="contact" id="contact" value="" placeholder="Email" />
+		            <textarea class="odamae-textarea" name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
                 </div>
-                <label for="exampleMessage">Message</label>
-                <textarea class="u-full-width" name="message" placeholder="Your message..." id="message"></textarea>
-                <input type="hidden" name="_next" value="thankyou.html" />
-                <input type="hidden" name="_subject" value="[F3 Website Submission]" />
-                <input class="button-primary" type="submit" value="Send" id="submit-button">
-            </form>
+                <div class="odamae-row visual-captcha"></div>
+                <div class="odamae-row actions">
+		<input type="submit" class="odamae-button odamae-submit" value="Send Message" onclick="odamaeSubmit(this)" data-apikey="odamae.io_342c6d8f61de68449db1273c4aa551ed_1179" />
+    </div>
+</form>
         </div>
     </div>
     <div class="footer">
@@ -145,39 +140,6 @@
       }
     }
   });
-});
-
-$(function() {
-  // Initialize form validation on the registration form.
-  // It has the name attribute "registration"
-  $("form[name='contact-form']").validate({
-    // Specify validation rules
-    rules: {
-      // The key name on the left side is the name attribute
-      // of an input field. Validation rules are defined
-      // on the right side
-      fullName: "required",
-      _replyto: {
-        required: true,
-        // Specify that email should be validated
-        // by the built-in "email" rule
-        email: true
-      },
-      message: "required"
-    },
-    // Specify validation error messages
-    messages: {
-      fullName: "Please enter your full name",
-      _replyto: "Please enter a valid email address",
-      message: "Please enter a message"
-    },
-    // Make sure the form is submitted to the destination defined
-    // in the "action" attribute of the form when valid
-    submitHandler: function(form) {
-      form.submit();
-    }
-  });
-})
     </script>
 </body>
 
